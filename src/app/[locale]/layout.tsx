@@ -5,14 +5,15 @@ import {
 import { Inter, Noto_Kufi_Arabic } from 'next/font/google'
 
 import { cn } from '@/lib/utils'
+import { Header } from '../../components/Header'
 import Providers from '../provides/Providers'
-import { Header } from './components/Header'
 import './globals.css'
+import { Footer } from '@/components/Footer'
 
 const inter = Inter({ subsets: ["latin"] });
 const kufi = Noto_Kufi_Arabic({ subsets: ["arabic"] })
 export const metadata: Metadata = {
-  title: 'Next Temp',
+  title: 'ITEXC INCUBYTE',
   description: 'create next app By Yahya Parvar!'
 }
 
@@ -28,14 +29,15 @@ export default function RootLayout({
     <html
       lang={locale}
       dir={locale === 'ar' || locale == 'fa' ? 'rtl' : 'ltr'}
-      className={cn('scroll-smooth font-medium ', inter.className,)}
+      className=''
       suppressHydrationWarning
     >
-      <body className={cn(inter.className)}
+      <body className={cn('text-lg', inter.className)}
       >
         <Providers locale={locale} messages={messages} >
           <Header />
           {children}
+          <Footer />
         </Providers>
 
       </body>
