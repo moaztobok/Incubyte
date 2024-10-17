@@ -1,81 +1,40 @@
-'use client'
-import { capitalize } from '@/lib/utils'
-import { useTranslations } from 'next-intl'
-import { useTheme } from 'next-themes'
-import { useEffect, useRef, useState } from 'react'
-import { FiSun } from 'react-icons/fi'
-import { useOnClickOutside } from 'usehooks-ts'
-import Button from './Button'
+"use client"
 
-export default function ThemeSwitch() {
-  const t = useTranslations('')
-  const [mounted, setMounted] = useState(false)
-  const [isOpen, setIsOpen] = useState(false) // New state to control dropdown visibility
-  const { setTheme, resolvedTheme, themes, theme } = useTheme()
-  const ref = useRef(null)
-  useEffect(() => setMounted(true), [])
-  useOnClickOutside(ref, () => setIsOpen(false))
-  if (!mounted)
-    return (
-      <Button
-        size='small'
-        type='button'
-        className='text-destructive inline-flex w-fit min-w-[95px] items-center justify-between gap-3'
-        id='options-menu'
-        aria-expanded={isOpen}
-        onClick={() => {}}
-      >
-        <span className='ml-2'>{t('Theme')}</span>
-        <FiSun />
-      </Button>
-    )
+import * as React from "react"
+import { Moon, Sun } from "lucide-react"
+import { useTheme } from "next-themes"
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen)
-  }
+import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
+export function ThemeSwitch() {
+  const { setTheme } = useTheme()
 
   return (
-    <div ref={ref} className='relative inline-block text-left'>
-      <Button
-        size='small'
-        type='button'
-        className='text-destructive inline-flex w-full min-w-[95px] items-center justify-between gap-3'
-        id='options-menu'
-        aria-expanded={isOpen}
-        onClick={toggleDropdown}
-      >
-        <span className='ml-2'>{t('Theme')}</span>
-        <FiSun />
-      </Button>
-      {isOpen && (
-        <div className='absolute right-0 mt-2 w-full origin-top-right rounded-md bg-dropdown shadow-lg'>
-          <div
-            className='py-1'
-            role='menu'
-            aria-orientation='vertical'
-            aria-labelledby='options-menu'
-          >
-            {themes.map(themeItem => {
-              return (
-                <button
-                  key={themeItem}
-                  onClick={() => {
-                    setTheme(themeItem)
-                    setIsOpen(false)
-                  }}
-                  className={`block w-full px-4 py-2 text-left text-sm hover:bg-dropdownHover ${
-                    themeItem === theme
-                      ? 'bg-selected text-primary hover:bg-selected'
-                      : 'text-secondary'
-                  }`}
-                >
-                  {capitalize(themeItem)}
-                </button>
-              )
-            })}
-          </div>
-        </div>
-      )}
-    </div>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" size="icon">
+          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <span className="sr-only">Toggle theme</span>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="center">
+        <DropdownMenuItem onClick={() => setTheme("light")}>
+          Light
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("dark")}>
+          Dark
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("system")}>
+          System
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   )
 }
