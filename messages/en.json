@@ -1,19 +1,72 @@
 {
-  "About": "About",
-  "Support": "Support",
-  "Other": "Other",
-  "Theme": "Theme",
-  "An": "A",
-  "Booster": "Booster",
-  "to_Your_NextJS_Apps": "to Your NextJS Apps",
-  "An_approachable_performant_and_versatile_boilerplate_for_building_SSR_applications": "An approachable, performant and versatile boilerplate for building SSR applications.",
-  "Use_Template": "Use Template",
-  "Learn_More": "Learn More!",
-  "Approachable": "Approachable",
-  "Add_components_without_sending_additional_client_side_JavaScript_Built_on_the_latest_React_features": "Add components without sending additional client-side JavaScript. Built on the latest React features.",
-  "Automatic_Image_Font_and_Script_Optimizations_for_improved_UX_and_Core_Web_Vitals": "Automatic Image, Font, and Script Optimizations for improved UX and Core Web Vitals.",
-  "Versatile": "Versatile",
-  "A_rich_incredibly_adoptable_template_that_scales_between_a_small_showcase_website_and_a_full_size_app": "A rich, incredibly adoptable template that scales between a small showcase website and a full-size app.",
-  "This_is_a_simple_about_page_just_to_show_how_you_can_use_the_internationalization_in_different_pages": "This is a simple about page just to show how you can use the internationalization in different pages",
-  "Performant": "Performant"
+
+  "Navigation": {
+    "Home": "Home",
+    "About": "About",
+    "Services": "Services",
+    "Projects": "Projects",
+    "Contact": "Contact",
+    "Language": "Language",
+    "English": "English",
+    "French": "French",
+    "Arabic": "Arabic",
+    "Theme":{
+      "System":"System",
+      "Dark":"Dark",
+      "Light":"Light"
+    }
+  },
+  "Home": {
+    "Hero-section":{
+      "next-gen":"Next-gen Business Incubator",
+      "hero-desc": "Incubyte: Empowering Algerian innovators with the resources, mentorship, and training to turn ideas into successful ventures.",
+      "Learn_More":"Learn More!"
+    },
+    "Future-section":{
+      "title":"Empowering Algeria's future through innovation and entrepreneurial opportunities.",
+      "desc":"At Incubyte, we are dedicated to connecting aspiring entrepreneurs with the resources they need to succeed. Our mission is to cultivate local talent and foster innovation, creating a vibrant startup ecosystem in Algeria.",
+      "list":{
+        "one":"At Incubyte, we are dedicated to connecting aspiring entrepreneurs with the resources they need to succeed. Our mission is to cultivate local talent and foster innovation, creating a vibrant startup ecosystem in Algeria.",
+        "two":"Nurturing innovation through education and mentorship programs.",
+        "three":"Building networks that empower aspiring entrepreneurs in Algeria."
+      }
+    },
+    "Education-programs":{
+      "title":"Our Comprehensive Education Programs and Resources",
+      "list":{
+        "one":"Accelerate Your Startup Journey with Tailored Incubation Services and Support",
+        "one-desc":"Our education programs are designed to equip you with essential skills for success.",
+        "two":"Unlock Your Potential with Expert Mentorship and Guidance",
+        "two-desc":"Our mentorship programs connect you with experienced professionals to guide your growth.",
+        "three":"Build Your Network and Access Valuable Resources for Your Startup",
+        "three-desc":"We facilitate access to resources and connections that foster entrepreneurial success."
+      }
+    },
+    "join-us":{
+      "title":"Join Our Programs Today!",
+      "desc":"Empower your future with our expert-led training.",
+      "button":"Get Involved",
+      "register":"Register",
+      "apply":"Apply"
+    },
+    "connect":{
+      "title":"Connect with Us",
+      "desc":"We’re here to help you succeed in your journey.",
+      "email":"Email",
+      "email-desc":"Reach us anytime at",
+      "phone":"Phone",
+      "phone-desc":"Call us for inquiries at",
+      "office":"Office",
+      "office-desc":"Visit us at our office in Algiers",
+      "address":"Subdivision of the commune, Lot N01, Building N02, Dar El-Beida, Algiers."
+    },
+    "newsletter":{
+      "title":"Stay Updated with Incubyte",
+      "desc":"Join our newsletter for the latest updates on programs, events, and opportunities at Incubyte.",
+      "email":"Email",
+      "placeholder":"Enter your email",
+      "button":"Subscribe",
+      "terms":"By subscribing, you agree to receive emails from Incubyte. You can unsubscribe at any time."
+    }
+  }
 }

@@ -4,22 +4,24 @@ import { FadeElement, FadeText } from '../ui/fade-text'
 import List from '../ui/List'
 import ListItem from '../ui/ListItem'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 const AlgeriaFuture = () => {
+    const t = useTranslations('Home.Future-section')
     return (
         <SectionWrapper>
             <FadeElement className='flex-1 flex items-center'>
                 <div className='flex flex-col gap-4'>
                     <h2 className='Title'>
-                        Empowering Algeria&apos;s future through innovation and entrepreneurial opportunities.
+                        {t('title')}
                     </h2>
                     <p>
-                        At Incubyte, we are dedicated to connecting aspiring entrepreneurs with the resources they need to succeed. Our mission is to cultivate local talent and foster innovation, creating a vibrant startup ecosystem in Algeria.
+                        {t('desc')}
                     </p>
                     <List>
-                        <ListItem text='Connecting talent with opportunities for growth and success.' />
-                        <ListItem text='Nurturing innovation through education and mentorship programs.' />
-                        <ListItem text='Building networks that empower aspiring entrepreneurs in Algeria.' />
+                        <ListItem text={t('list.one')} />
+                        <ListItem text={t('list.two')} />
+                        <ListItem text={t('list.three')} />
                     </List>
                 </div>
             </FadeElement>

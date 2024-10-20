@@ -23,13 +23,8 @@ export default function LangSwitcher() {
 
   const options: Option[] = [
     { country: 'English', code: 'en' },
-    { country: 'Deutsch', code: 'de' },
     { country: 'Français', code: 'fr' },
-    { country: 'Español', code: 'es' },
-    { country: 'Русский', code: 'ru' },
-    { country: '日本語', code: 'ja' },
     { country: 'العربية', code: 'ar' },
-    { country: 'فارسی', code: 'fa' }
   ]
 
   return (

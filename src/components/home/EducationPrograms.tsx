@@ -3,27 +3,28 @@ import SectionWrapper from '../SectionWrapper';
 import { Card } from '../ui/card';
 import { FadeElement, FadeText } from '../ui/fade-text';
 import { HeartHandshake, HeartHandshakeIcon, Link, NotebookPen, Rocket } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const EducationPrograms = () => {
-
+    const t = useTranslations('Home.Education-programs');
     const data = [
         {
-            title: "Accelerate Your Startup Journey with Tailored Incubation Services and Support",
-            description: "Our education programs are designed to equip you with essential skills for success.",
+            title: t('list.one'),
+            description: t('list.one-desc'),
             icon: <div className='w-16 aspect-square rounded-full bg-primary text-white flex items-center justify-center'>
                 <NotebookPen size={24} />
             </div>
         },
         {
-            title: "Unlock Your Potential with Expert Mentorship and Guidance",
-            description: "Our mentorship programs connect you with experienced professionals to guide your growth.",
+            title: t('list.two'),
+            description: t('list.two-desc'),
             icon: <div className='w-16 aspect-square rounded-full bg-primary text-white flex items-center justify-center'>
                 <HeartHandshakeIcon size={24} />
             </div>
         },
         {
-            title: "Build Your Network and Access Valuable Resources for Your Startup",
-            description: "We facilitate access to resources and connections that foster entrepreneurial success.",
+            title: t('list.three'),
+            description: t('list.three-desc'),
             icon: <div className='w-16 aspect-square rounded-full bg-primary text-white flex items-center justify-center'>
                 <Rocket size={24} />
             </div>
@@ -31,13 +32,13 @@ const EducationPrograms = () => {
     ];
     return (
         <SectionWrapper className={{
-            innerWrapper: 'flex flex-col',
+            innerWrapper: 'flex flex-col items',
         }}>
-            <div className='flex flex-col items-center gap-8  text-center'>
+            <div className='flex flex-col items-center gap-8  text-center flex-1'>
                 <div className='max-w-3xl text-center'>
-                    <FadeText className='Title' text='Empower Your Future with Our Comprehensive Education Programs and Resources' />
+                    <FadeText className='Title' text={t('title')} />
                 </div>
-                <div className='flex flex-col md:flex-row gap-4'>
+                <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
                     {data.map((data, index) => (
                         <FadeElement key={index}>
                             <Card className="border-none flex w-full h-full flex-col items-center gap-4 shadow-none">

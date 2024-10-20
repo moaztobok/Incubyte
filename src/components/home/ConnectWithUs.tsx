@@ -3,23 +3,26 @@ import SectionWrapper from '../SectionWrapper'
 import { FadeElement } from '../ui/fade-text'
 import { Mail, MapPinIcon, Phone } from 'lucide-react'
 import Map from './Map'
+import { useTranslations } from 'next-intl'
 
 const ConnectWithUs = () => {
+    const t = useTranslations('Home.connect')
+
     return (
         <SectionWrapper>
             <FadeElement className='flex flex-col gap-4 flex-[0.5]'>
                 <h2 className='Title'>
-                    Connect with us
+                {t('title')}
                 </h2>
                 <p className='text-muted-foreground text-sm'>
-                    We’re here to help you succeed in your journey.
-                </p>
+    {t('desc')}
+                    </p>
                 <div className='flex flex-col gap-6 my-4 text-md'>
                     <FadeElement>
                         <div className='flex flex-col gap-2'>
                             <Mail />
-                            <h2 className='font-semibold text-lg'>Email</h2>
-                            <p>Reach us anytime at</p>
+                            <h2 className='font-semibold text-lg'>{t('email')}</h2>
+                            <p>{t('')}</p>
                             <p className='text-primary'>
                                 contact@itexcgroup.com                            </p>
                         </div>
@@ -27,8 +30,8 @@ const ConnectWithUs = () => {
                     <FadeElement>
                         <div className='flex flex-col gap-2'>
                             <Phone />
-                            <h2 className='font-semibold text-lg'>Phone</h2>
-                            <p>Call us for inquiries at</p>
+                            <h2 className='font-semibold text-lg'>{t('phone')}</h2>
+                            <p>{t('phone-desc')}</p>
                             <p className='text-primary'>
                                 contact@itexcgroup.com
                             </p>
@@ -37,10 +40,19 @@ const ConnectWithUs = () => {
                     <FadeElement>
                         <div className='flex flex-col gap-2'>
                             <MapPinIcon />
-                            <h2 className='font-semibold text-lg'>Office</h2>
-                            <p>Reach us anytime at</p>
+                            <h2 className='font-semibold text-lg'>
+                            {
+                                t('office')
+                            }
+                            </h2>
+                            <p>    {
+                                t('office-desc')
+                            }</p>
                             <p className='text-primary'>
-                                Subdivision of the commune, Lot N01, Building N02, Dar El-Beida, Algiers.
+                            {
+                                t('address')
+                            }
+
                             </p>
                         </div>
                     </FadeElement>

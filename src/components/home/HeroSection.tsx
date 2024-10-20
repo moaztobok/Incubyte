@@ -5,8 +5,10 @@ import AnimatedGradientText from "../ui/animated-gradient-text";
 import GridPattern from "../ui/animated-grid-pattern";
 import { Button } from "../ui/button";
 import { FadeElement, FadeText } from "../ui/fade-text";
+import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
+    const t = useTranslations()
     return (
         <div className="grid place-items-center h-screen" >
             <GridPattern height={100} width={100} className={cn(
@@ -25,18 +27,18 @@ export default function HeroSection() {
 
                     <FadeText framerProps={{
                         show: { transition: { delay: 0.2 } }
-                    }} className="md:text-6xl text-2xl font-bold w-full" text="Next-gen Business Incubator" />                </div>
+                    }} className="md:text-6xl text-2xl font-bold w-full" text={t('Home.Hero-section.next-gen')} /></div>
 
                 <div className="max-w-2xl">
                     <FadeText framerProps={{
                         show: { transition: { delay: 0.4 } }
-                    }} className="text-lg max-w-xl text-balance" text="Incubyte: Empowering Algerian innovators with the resources, mentorship, and training to turn ideas into successful ventures." />
+                    }} className="text-lg max-w-xl text-balance" text={t('Home.Hero-section.hero-desc')} />
                 </div>
                 <FadeElement framerProps={{
                     show: { transition: { delay: 0.6 } }
                 }}>
                     <Button variant={"outline"} className="bg-background">
-                        <Link href="/about">Learn More</Link>
+                        <Link href="/about">{t('Home.Hero-section.Learn_More')}</Link>
                     </Button>
                 </FadeElement>
             </div>

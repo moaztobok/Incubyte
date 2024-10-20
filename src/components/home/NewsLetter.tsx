@@ -3,8 +3,10 @@ import SectionWrapper from '../SectionWrapper'
 import { FadeElement } from '../ui/fade-text'
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
+import { useTranslations } from 'next-intl'
 
 const NewsLetter = () => {
+    const t = useTranslations('Home.newsletter')
     return (
         <SectionWrapper className={{
             section: 'bg-muted'
@@ -12,17 +14,17 @@ const NewsLetter = () => {
             <FadeElement className='flex-1 gap'>
                 <div className='flex flex-col gap-4'>
                     <h2 className='Title'>
-                        Stay Updated with Incubyte                    </h2>
+                        {t('title')}  </h2>
                     <p>
-                        Join our newsletter for the latest updates on programs, events, and opportunities at Incubyte.                    </p>
+                        {t('desc')}                  </p>
                     <form className='flex gap-4'>
-                        <Input placeholder='Your Email Here' className='max-w-xs' />
+                        <Input placeholder={t('placeholder')} className='max-w-xs' />
                         <Button className='text-white'>
-                            Subscribe
+                            {t('button')}
                         </Button>
                     </form>
                     <p className='text-xs text-muted-foreground'>
-                        By clicking Join Now, you agree to our Terms and Conditions.
+                        {t('terms')}
                     </p>
                 </div>
             </FadeElement>
