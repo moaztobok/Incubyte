@@ -8,7 +8,7 @@ import { ThemeSwitch } from './ThemeSwitch'
 export const Header = () => {
   const t = useTranslations('Navigation')
   return (
-    <header className='mx-auto flex bg-background fixed top-0 left-0 z-10 w-full flex-row items-center justify-between'>
+    <header className='flex  fixed top-0 bg-background left-0 z-10 w-full flex-row items-center justify-between'>
       <div className='flex wrapper my-0 w-full justify-between py-4'>
         <Link href='/' className='flex items-center min-w-40'>
           <LogoIcon />

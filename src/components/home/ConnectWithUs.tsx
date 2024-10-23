@@ -6,7 +6,7 @@ import Map from './Map'
 import { useTranslations } from 'next-intl'
 
 const ConnectWithUs = () => {
-    const t = useTranslations('Home.connect')
+    const t = useTranslations('Home.Connect')
 
     return (
         <SectionWrapper>

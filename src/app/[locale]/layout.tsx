@@ -2,19 +2,21 @@ import type { Metadata } from 'next'
 import {
   useMessages
 } from 'next-intl'
-import { Inter, Noto_Kufi_Arabic } from 'next/font/google'
+import { Chivo, Inter, Noto_Kufi_Arabic } from 'next/font/google'
 
+import { Footer } from '@/components/Footer'
 import { cn } from '@/lib/utils'
 import { Header } from '../../components/Header'
 import Providers from '../provides/Providers'
 import './globals.css'
-import { Footer } from '@/components/Footer'
+import { getMessages } from 'next-intl/server'
 
 const inter = Inter({ subsets: ["latin"] });
+const chivo = Chivo({ subsets: ["latin"] });
 const kufi = Noto_Kufi_Arabic({ subsets: ["arabic"] })
 export const metadata: Metadata = {
   title: 'ITEXC INCUBYTE',
-  description: 'create next app By Yahya Parvar!'
+  description: 'ITEXC INCUBYTE is a startup incubator that aims to help startups grow and scale their businesses.',
 }
 
 export default function RootLayout({
@@ -32,7 +34,7 @@ export default function RootLayout({
       className=''
       suppressHydrationWarning
     >
-      <body className={cn('text-lg', inter.className)}
+      <body className={cn('text-lg selection:bg-primary selection:text-white', locale === 'ar' ? kufi.className : chivo.className)}
       >
         <Providers locale={locale} messages={messages} >
           <Header />

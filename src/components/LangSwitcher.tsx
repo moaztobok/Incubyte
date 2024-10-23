@@ -1,7 +1,6 @@
 'use client'
 
 import { capitalize } from '@/lib/utils'
-import Link from 'next/link'
 import { usePathname, useSelectedLayoutSegments } from 'next/navigation'
 import React from 'react'
 import { FiGlobe } from 'react-icons/fi'
@@ -12,8 +11,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { useTranslations } from 'next-intl'
+import Link from 'next/link'
 
 export default function LangSwitcher() {
+  const t = useTranslations('Navigation')
   interface Option {
     country: string
     code: string
@@ -32,7 +34,7 @@ export default function LangSwitcher() {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline" size="sm">
-            Language
+            {t('Language')}
             <FiGlobe className="ms-2 h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
@@ -46,12 +48,8 @@ export default function LangSwitcher() {
                   : ''
                   }`}
               >
-                <button
-                  lang={lang.code}
-                  className="w-full text-left"
-                >
-                  {capitalize(lang.country)}
-                </button>
+
+                {capitalize(lang.country)}
               </Link>
             </DropdownMenuItem>
           ))}

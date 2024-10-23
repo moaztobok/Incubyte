@@ -11,7 +11,7 @@ export default function HeroSection() {
     const t = useTranslations()
     return (
         <div className="grid place-items-center h-screen" >
-            <GridPattern height={100} width={100} className={cn(
+            <GridPattern width={80} height={80} className={cn(
                 "opacity-20",
             )} />
             <div className="wrapper gap-4 my-0 flex flex-col justify-center items-center h-full text-center">
@@ -24,7 +24,6 @@ export default function HeroSection() {
                     </AnimatedGradientText>
                 </FadeElement>
                 <div className="max-w-[100vw]">
-
                     <FadeText framerProps={{
                         show: { transition: { delay: 0.2 } }
                     }} className="md:text-6xl text-2xl font-bold w-full" text={t('Home.Hero-section.next-gen')} /></div>

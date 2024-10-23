@@ -1,9 +1,9 @@
 import AlgeriaFuture from '@/components/home/AlgeriaFuture'
-import HeroSection from '../../components/home/HeroSection'
+import ConnectWithUs from '@/components/home/ConnectWithUs'
 import EducationPrograms from '@/components/home/EducationPrograms'
 import JointUs from '@/components/home/JointUs'
 import NewsLetter from '@/components/home/NewsLetter'
-import ConnectWithUs from '@/components/home/ConnectWithUs'
+import HeroSection from '../../components/home/HeroSection'
 
 export default function page() {
   return (

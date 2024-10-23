@@ -132,6 +132,7 @@ export function GridPattern({
               delay: index * 0.1,
               repeatType: "reverse",
             }}
+            className='hover:bg-primary hover:fill-primary hover:stroke-primary'
             onAnimationComplete={() => updateSquarePosition(id)}
             key={`${x}-${y}-${index}`}
             width={width - 1}

@@ -1,72 +1,122 @@
 {
 
-  "Navigation": {
-    "Home": "Home",
-    "About": "About",
-    "Services": "Services",
-    "Projects": "Projects",
-    "Contact": "Contact",
-    "Language": "Language",
-    "English": "English",
-    "French": "French",
-    "Arabic": "Arabic",
-    "Theme":{
-      "System":"System",
-      "Dark":"Dark",
-      "Light":"Light"
+    "Navigation": {
+      "Home": "Home",
+      "About": "About",
+      "Services": "Services",
+      "Projects": "Projects",
+      "Contact": "Contact",
+      "Language": "Language",
+      "English": "English",
+      "French": "French",
+      "Arabic": "Arabic",
+      "Theme":{
+        "System":"System",
+        "Dark":"Dark",
+        "Light":"Light"
+      }
+    },
+    "Home": {
+      "Hero-section":{
+        "next-gen":"Next-gen Business Incubator",
+        "hero-desc": "Incubyte: Empowering Algerian innovators with the resources, mentorship, and training to turn ideas into successful ventures.",
+        "Learn_More":"Learn More!"
+      },
+      "Future-section":{
+        "title":"Empowering Algeria's future through innovation and entrepreneurial opportunities.",
+        "desc":"At Incubyte, we are dedicated to connecting aspiring entrepreneurs with the resources they need to succeed. Our mission is to cultivate local talent and foster innovation, creating a vibrant startup ecosystem in Algeria.",
+        "list":{
+          "one":"Connecting talent with opportunities for growth and success.",
+          "two":"Nurturing innovation through education and mentorship programs.",
+          "three":"Building networks that empower aspiring entrepreneurs in Algeria."
+        }
+      },
+      "Education-programs":{
+        "title":"Our Comprehensive Education Programs and Resources",
+        "list":{
+          "one":"Accelerate Your Startup Journey with Tailored Incubation Services and Support",
+          "one-desc":"Our education programs are designed to equip you with essential skills for success.",
+          "two":"Unlock Your Potential with Expert Mentorship and Guidance",
+          "two-desc":"Our mentorship programs connect you with experienced professionals to guide your growth.",
+          "three":"Build Your Network and Access Valuable Resources for Your Startup",
+          "three-desc":"We facilitate access to resources and connections that foster entrepreneurial success."
+        }
+      },
+      "join-us":{
+        "title":"Join Our Programs Today!",
+        "desc":"Empower your future with our expert-led training.",
+        "button":"Get Involved",
+        "register":"Register",
+        "apply":"Apply"
+      },
+      "Connect":{
+        "title":"Connect with Us",
+        "desc":"We’re here to help you succeed in your journey.",
+        "email":"Email",
+        "email-desc":"Reach us anytime at",
+        "phone":"Phone",
+        "phone-desc":"Call us for inquiries at",
+        "office":"Office",
+        "office-desc":"Visit us at our office in Algiers",
+        "address":"Subdivision of the commune, Lot N01, Building N02, Dar El-Beida, Algiers."
+      },
+      "newsletter":{
+        "title":"Stay Updated with Incubyte",
+        "desc":"Join our newsletter for the latest updates on programs, events, and opportunities at Incubyte.",
+        "email":"Email",
+        "placeholder":"Enter your email",
+        "button":"Subscribe",
+        "terms":"By subscribing, you agree to receive emails from Incubyte. You can unsubscribe at any time."
+      }
     }
-  },
-  "Home": {
-    "Hero-section":{
-      "next-gen":"Next-gen Business Incubator",
-      "hero-desc": "Incubyte: Empowering Algerian innovators with the resources, mentorship, and training to turn ideas into successful ventures.",
-      "Learn_More":"Learn More!"
-    },
-    "Future-section":{
-      "title":"Empowering Algeria's future through innovation and entrepreneurial opportunities.",
-      "desc":"At Incubyte, we are dedicated to connecting aspiring entrepreneurs with the resources they need to succeed. Our mission is to cultivate local talent and foster innovation, creating a vibrant startup ecosystem in Algeria.",
-      "list":{
-        "one":"At Incubyte, we are dedicated to connecting aspiring entrepreneurs with the resources they need to succeed. Our mission is to cultivate local talent and foster innovation, creating a vibrant startup ecosystem in Algeria.",
-        "two":"Nurturing innovation through education and mentorship programs.",
-        "three":"Building networks that empower aspiring entrepreneurs in Algeria."
-      }
-    },
-    "Education-programs":{
-      "title":"Our Comprehensive Education Programs and Resources",
-      "list":{
-        "one":"Accelerate Your Startup Journey with Tailored Incubation Services and Support",
-        "one-desc":"Our education programs are designed to equip you with essential skills for success.",
-        "two":"Unlock Your Potential with Expert Mentorship and Guidance",
-        "two-desc":"Our mentorship programs connect you with experienced professionals to guide your growth.",
-        "three":"Build Your Network and Access Valuable Resources for Your Startup",
-        "three-desc":"We facilitate access to resources and connections that foster entrepreneurial success."
-      }
-    },
-    "join-us":{
-      "title":"Join Our Programs Today!",
-      "desc":"Empower your future with our expert-led training.",
-      "button":"Get Involved",
-      "register":"Register",
-      "apply":"Apply"
-    },
-    "connect":{
-      "title":"Connect with Us",
-      "desc":"We’re here to help you succeed in your journey.",
-      "email":"Email",
-      "email-desc":"Reach us anytime at",
-      "phone":"Phone",
-      "phone-desc":"Call us for inquiries at",
-      "office":"Office",
-      "office-desc":"Visit us at our office in Algiers",
-      "address":"Subdivision of the commune, Lot N01, Building N02, Dar El-Beida, Algiers."
-    },
-    "newsletter":{
-      "title":"Stay Updated with Incubyte",
-      "desc":"Join our newsletter for the latest updates on programs, events, and opportunities at Incubyte.",
-      "email":"Email",
-      "placeholder":"Enter your email",
-      "button":"Subscribe",
-      "terms":"By subscribing, you agree to receive emails from Incubyte. You can unsubscribe at any time."
+    ,
+    "About":{
+      "Hero":{
+        "aim":"We aim to be the Number one",
+        "algeria":"Incubator in Algeria",
+        "slogan":"Byte by Byte , Incubating excellence"
+      },
+      "Story":{
+        "our-story":"Our Story",
+        "title":"The Journey Begins",
+        "desc":"Every great company starts with a dream. In 2019, what began as a freelancer's ambition transformed into ITEXC Group, founded by young Algerian entrepreneur Laid (Nadir) Belhadj. We understand firsthand the challenging journey from freelancing or having an idea to building a successful company because we've walked that path ourselves."
+      },
+      "Gap":{
+        "title":"Understanding the gap",
+        "desc":"As we grew from freelancers into a full-fledged software development company, we recollected on the numerous technical and entrepreneurial challenges. These experiences opened our eyes to a crucial gap in Algeria's entrepreneurial ecosystem: while technical talent abounded, the lack of business acumen and entrepreneurial guidance hindered the growth of many promising startups."
+      },
+      "Mission":{
+        "title":"What we offre",
+        "desc":"Tailored programs to meet your unique needs—whether you're launching a startup with Incubyte or looking to sharpen your skills, we offer the perfect solution for your growth.",
+        "list":{
+          "one":{
+            "title":"Skill Boosters",
+            "desc":"Accelerate your growth with our intensive short-term programs. These skill boosters are designed to quickly elevate your technical and entrepreneurial capabilities, giving you the edge in today's fast-paced tech landscape."
+          },
+          "two":{
+            "title":"Premium Path Programs",
+            "desc":"Embark on a transformative journey with our long-term premium courses. These comprehensive programs offer in-depth learning experiences, guiding you through every aspect of building and scaling a successful tech venture."
+          },
+          "three":{
+            "title":"Incubator Program",
+            "desc":"Turn your vision into reality with our flagship incubator program. We provide the resources, mentorship, and ecosystem support needed to navigate your entrepreneurial journey from idea to market-ready product."
+          }
+        }
+      },
+      "Why":{
+        "title":"Our Unique Approach",
+        "desc":"Our own journey taught us that success requires more than just technical expertise, it demands a deep understanding of business and entrepreneurship. This realization led to the birth of Incubyte - a place where you can harness skills to build your startup.",
+        "list":{
+          "one":"Transform skilled individuals into business owners",
+          "two":"Bridge the gap between technical/creative expertise and business success",
+          "three":"Guide innovators through their entrepreneurial journey",
+          "four":"Provide practical, real-world experience",
+          "five":"Foster collaboration between technical and creative domains"
+        }
+      },
+    "Community":{
+      "title":"Join our community",
+      "desc":"Join our discord community and stay updated with our latest news and events"
+    }
     }
   }
-}
