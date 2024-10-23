@@ -1,9 +1,9 @@
 'use client'
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
 import LogoIcon from '../app/icons/logo'
 import LangSwitcher from './LangSwitcher'
 import { ThemeSwitch } from './ThemeSwitch'
+import { Link } from '@/i18n'
 
 export const Header = () => {
   const t = useTranslations('Navigation')
@@ -15,8 +15,8 @@ export const Header = () => {
         </Link>
         <div className='md:flex flex-row items-center gap-3 hidden font-medium'>
           <nav className='inline-flex gap-6'>
-            <Link href='/'>{t('Home')}</Link>
-            <Link href={`/about`}>
+            <Link className='hover:text-primary' href='/'>{t('Home')}</Link>
+            <Link className='hover:text-primary' href={`/about`}>
               {t('About')}
             </Link>
           </nav>

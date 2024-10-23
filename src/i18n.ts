@@ -1,6 +1,6 @@
+import { createSharedPathnamesNavigation } from 'next-intl/navigation'
 import { getRequestConfig } from 'next-intl/server'
 import { notFound } from 'next/navigation'
-
 export const locales = ['en', 'fr', "ar"]
 export default getRequestConfig(async ({ locale }) => {
   // Validate that the incoming `locale` parameter is valid
@@ -10,3 +10,4 @@ export default getRequestConfig(async ({ locale }) => {
     messages: (await import(`../messages/${locale}.json`)).default
   }
 })
+export const { Link } = createSharedPathnamesNavigation({ locales });

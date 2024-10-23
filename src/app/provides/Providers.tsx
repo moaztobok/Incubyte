@@ -1,3 +1,4 @@
+'use client'
 import { AbstractIntlMessages, NextIntlClientProvider, useMessages } from 'next-intl'
 import { ThemeProvider } from 'next-themes'
 import NextTopLoader from 'nextjs-toploader'
@@ -33,7 +34,6 @@ const Providers = ({ locale, messages, children }: { locale: string, messages: A
                 />
                 {children}
             </NextIntlClientProvider>
-
         </ThemeProvider>
     )
 }

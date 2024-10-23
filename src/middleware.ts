@@ -1,17 +1,18 @@
 // middleware.ts
 import createMiddleware from 'next-intl/middleware';
 import { NextRequest } from 'next/server';
+import { locales } from './i18n';
 
 // Create the middleware configuration
 const intlMiddleware = createMiddleware({
   // Define your locales
-  locales: ['en', 'fr', 'ar'],
+  locales: locales,
 
   // Set your default locale
-  defaultLocale: 'en',
+  defaultLocale: 'ar',
 
   // Optional: Customize localePrefix to control URL structure
-  localePrefix: 'always', // 'as-needed' | 'never' | 'always'
+  localePrefix: 'as-needed', // 'as-needed' | 'never' | 'always'
 
   // Optional: Add locale detection
   localeDetection: true
@@ -33,5 +34,5 @@ export const config = {
   // - /_vercel (Vercel internals)
   // - /images (e.g. public files)
   // - /favicon.ico (favicon file)
-  matcher: ['/((?!api|_next|_vercel|images|favicon.ico).*)']
+  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)", "/(en|ar|fr)/:path*"]
 };

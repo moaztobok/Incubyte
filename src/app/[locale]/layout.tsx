@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: 'ITEXC INCUBYTE is a startup incubator that aims to help startups grow and scale their businesses.',
 }
 
-export default function RootLayout({
+export default function LocaleLayout({
   children,
   params: { locale }
 }: {
