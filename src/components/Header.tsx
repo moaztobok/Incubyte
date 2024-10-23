@@ -4,6 +4,7 @@ import LogoIcon from '../app/icons/logo'
 import LangSwitcher from './LangSwitcher'
 import { ThemeSwitch } from './ThemeSwitch'
 import { Link } from '@/i18n'
+import MobileNavSheet from './MobileNav'
 
 export const Header = () => {
   const t = useTranslations('Navigation')
@@ -13,7 +14,8 @@ export const Header = () => {
         <Link href='/' className='flex items-center min-w-40'>
           <LogoIcon />
         </Link>
-        <div className='md:flex flex-row items-center gap-3 hidden font-medium'>
+        <MobileNavSheet />
+        <div className='md:flex flex-row items-center gap-3 hidden font-medium '>
           <nav className='inline-flex gap-6'>
             <Link className='hover:text-primary' href='/'>{t('Home')}</Link>
             <Link className='hover:text-primary' href={`/about`}>

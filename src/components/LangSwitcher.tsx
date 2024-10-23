@@ -14,31 +14,50 @@ import {
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
-export default function LangSwitcher() {
+interface LangSwitcherProps {
+  buttonVariant?: "outline" | "default" | "destructive" | "secondary" | "ghost" | "link" | null | undefined
+  buttonSize?: "default" | "sm" | "lg" | "icon" | null | undefined
+  icon?: React.ReactNode,
+  dropdownOptions?: Option[]
+  className?: string
+  align?: "center" | "end" | "start" | undefined
+}
+
+interface Option {
+  country: string
+  code: string
+}
+
+export default function LangSwitcher({
+  buttonVariant = "outline",
+  align = 'center',
+  buttonSize = "sm",
+  icon = <FiGlobe className="ms-2 h-4 w-4" />,
+  dropdownOptions,
+  className = ''
+}: LangSwitcherProps) {
   const t = useTranslations('Navigation')
-  interface Option {
-    country: string
-    code: string
-  }
   const pathname = usePathname()
   const urlSegments = useSelectedLayoutSegments()
 
-  const options: Option[] = [
+  const defaultOptions: Option[] = [
     { country: 'English', code: 'en' },
     { country: 'Français', code: 'fr' },
     { country: 'العربية', code: 'ar' },
   ]
 
+  const options = dropdownOptions || defaultOptions
+
   return (
-    <div className='flex items-center justify-center'>
-      <DropdownMenu>
+    <div className={`flex items-center justify-center ${className}`}>
+      <DropdownMenu >
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="sm">
+          <Button variant={buttonVariant} size={buttonSize}>
             {t('Language')}
-            <FiGlobe className="ms-2 h-4 w-4" />
+            {icon}
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent>
+        <DropdownMenuContent align={align}>
           {options.map(lang => (
             <DropdownMenuItem key={lang.code} asChild>
               <Link
@@ -48,7 +67,6 @@ export default function LangSwitcher() {
                   : ''
                   }`}
               >
-
                 {capitalize(lang.country)}
               </Link>
             </DropdownMenuItem>
