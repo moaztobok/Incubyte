@@ -12,19 +12,19 @@ const ConnectWithUs = () => {
         <SectionWrapper>
             <FadeElement className='flex flex-col gap-4 flex-[0.5]'>
                 <h2 className='Title'>
-                {t('title')}
+                    {t('title')}
                 </h2>
                 <p className='text-muted-foreground text-sm'>
-    {t('desc')}
-                    </p>
+                    {t('desc')}
+                </p>
                 <div className='flex flex-col gap-6 my-4 text-md'>
                     <FadeElement>
                         <div className='flex flex-col gap-2'>
                             <Mail />
                             <h2 className='font-semibold text-lg'>{t('email')}</h2>
-                            <p>{t('')}</p>
+                            <p>{t('email-desc')}</p>
                             <p className='text-primary'>
-                                contact@itexcgroup.com                            </p>
+                                contact@itexcgroup.com</p>
                         </div>
                     </FadeElement>
                     <FadeElement>
@@ -41,17 +41,17 @@ const ConnectWithUs = () => {
                         <div className='flex flex-col gap-2'>
                             <MapPinIcon />
                             <h2 className='font-semibold text-lg'>
-                            {
-                                t('office')
-                            }
+                                {
+                                    t('office')
+                                }
                             </h2>
                             <p>    {
                                 t('office-desc')
                             }</p>
                             <p className='text-primary'>
-                            {
-                                t('address')
-                            }
+                                {
+                                    t('address')
+                                }
 
                             </p>
                         </div>

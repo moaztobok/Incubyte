@@ -13,10 +13,10 @@ const Gap = () => {
             <FadeElement className="flex-1">
                 <div className="flex flex-col gap-4 justify-center h-full">
                     <h2 className="Title">
-                       {t('title')}
+                        {t('title')}
                     </h2>
                     <p className='text-balance'>
-                       {t('desc')}
+                        {t('desc')}
                     </p>
                 </div>
             </FadeElement>
