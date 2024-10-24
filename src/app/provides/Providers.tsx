@@ -10,10 +10,11 @@ const Providers = ({ locale, messages, children }: { locale: string, messages: A
         <ThemeProvider
             enableSystem
             attribute='class'
-            defaultTheme='light'
+            defaultTheme='system'
             themes={[
                 'light',
                 'dark',
+                'system'
             ]}
         >
             <NextIntlClientProvider
